@@ -1,0 +1,13 @@
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.exe
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.deps.json
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.runtimeconfig.json
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.runtimeconfig.dev.json
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.dll
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\bin\Debug\netcoreapp3.1\ConsoleApp-as.pdb
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.csprojAssemblyReference.cache
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.AssemblyInfoInputs.cache
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.AssemblyInfo.cs
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.csproj.CoreCompileInputs.cache
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.dll
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.pdb
+C:\Users\aoyuu\OneDrive\デスクトップ\C#フォルダ-Windows\C-idioms-as\ConsoleApp-as\ConsoleApp-as\obj\Debug\netcoreapp3.1\ConsoleApp-as.genruntimeconfig.cache
