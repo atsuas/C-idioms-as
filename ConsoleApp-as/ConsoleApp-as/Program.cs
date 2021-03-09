@@ -6,11 +6,35 @@ namespace ConsoleApp_as
     {
         static void Main(string[] args)
         {
-            DateTime date = new DateTime(2016, 8, 20);
-            int year = date.Year;
-
-            //10日後をもとめる
-            DateTime daysAfter10 = date.AddDays(10);
+            Employee employee = new Employee
+            {
+                Id = 100,
+                Name = "山田太郎",
+                Birthday = new DateTime(1990, 7, 2),
+                DivisionName = "第一営業部",
+            };
+            Console.WriteLine("{0}({1})は{2}に所属しています",
+                employee.Name, employee.GetAge(), employee.DivisionName);
         }
+    }
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public DateTime Birthday { get; set; }
+        public int GetAge()
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - Birthday.Year;
+            if (today < Birthday.AddYears(age))
+                age--;
+            return age;
+        }
+    }
+
+    public class Employee : Person
+    {
+        public int Id { get; set; }
+        public string DivisionName { get; set; }
     }
 }
