@@ -6,35 +6,39 @@ namespace ConsoleApp_as
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee
-            {
-                Id = 100,
-                Name = "山田太郎",
-                Birthday = new DateTime(1990, 7, 2),
-                DivisionName = "第一営業部",
-            };
-            Console.WriteLine("{0}({1})は{2}に所属しています",
-                employee.Name, employee.GetAge(), employee.DivisionName);
+            Product dorayaki = new Product(98, "どらやき", 210);
+
+            int id = dorayaki.Id;
+            string name = dorayaki.Name;
+            int price = dorayaki.Price;
+
+            int totalPrice = price + dorayaki.GetTax();
+            Console.WriteLine("{0}番、{1}は{2}円です", id, name, totalPrice);
+
         }
     }
 
-    public class Person
-    {
-        public string Name { get; set; }
-        public DateTime Birthday { get; set; }
-        public int GetAge()
-        {
-            DateTime today = DateTime.Today;
-            int age = today.Year - Birthday.Year;
-            if (today < Birthday.AddYears(age))
-                age--;
-            return age;
-        }
-    }
-
-    public class Employee : Person
+    class Product
     {
         public int Id { get; set; }
-        public string DivisionName { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
+
+        public Product(int id, string name, int price)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Price = price;
+        }
+
+        public int GetTax()
+        {
+            return (int)(Price * 0.08);
+        }
+
+        public int TotalPrice()
+        {
+            return Price + GetTax();
+        }
     }
 }
