@@ -6,39 +6,29 @@ namespace ConsoleApp_as
     {
         static void Main(string[] args)
         {
-            Product dorayaki = new Product(98, "どらやき", 210);
-
-            int id = dorayaki.Id;
-            string name = dorayaki.Name;
-            int price = dorayaki.Price;
-
-            int totalPrice = price + dorayaki.GetTax();
-            Console.WriteLine("{0}番、{1}は{2}円です", id, name, totalPrice);
+            Student student = new Student
+            {
+                Name = "高田",
+                Age = 16,
+                Grade = 3,
+                ClassNumber = 2
+            };
+            Console.WriteLine("{0}さんは、{1}歳で{2}年{3}組になりました",
+                student.Name, student.Age, student.Grade, student.ClassNumber);
 
         }
     }
 
-    class Product
+    public class Person
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public int Price { get; set; }
+        public int Age { get; set; }
 
-        public Product(int id, string name, int price)
-        {
-            this.Id = id;
-            this.Name = name;
-            this.Price = price;
-        }
+    }
 
-        public int GetTax()
-        {
-            return (int)(Price * 0.08);
-        }
-
-        public int TotalPrice()
-        {
-            return Price + GetTax();
-        }
+    public class Student : Person
+    {
+        public int Grade { get; set; }
+        public int ClassNumber { get; set; }
     }
 }
