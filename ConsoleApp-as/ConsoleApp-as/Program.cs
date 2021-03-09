@@ -1,34 +1,16 @@
 ﻿using System;
 
-namespace ConsoleApp_as
+namespace DistanceConverter
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Student student = new Student
+           for (int feet = 1; feet <= 10; feet++)
             {
-                Name = "高田",
-                Age = 16,
-                Grade = 3,
-                ClassNumber = 2
-            };
-            Console.WriteLine("{0}さんは、{1}歳で{2}年{3}組になりました",
-                student.Name, student.Age, student.Grade, student.ClassNumber);
-
+                double meter = feet * 0.3048;
+                Console.WriteLine("{0}ft = {1:0.0000} m", feet, meter);
+            }
         }
-    }
-
-    public class Person
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-
-    }
-
-    public class Student : Person
-    {
-        public int Grade { get; set; }
-        public int ClassNumber { get; set; }
     }
 }
