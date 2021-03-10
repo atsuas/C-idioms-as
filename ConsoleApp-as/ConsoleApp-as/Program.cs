@@ -8,7 +8,9 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("はじめまして。");
+            Console.WriteLine("私はプログラミングが好きです");
+
         }
         
     }
