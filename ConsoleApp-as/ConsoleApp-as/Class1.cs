@@ -4,14 +4,18 @@ using System.Text;
 
 namespace DistanceConverter
 {
-    class FeetConverter
+    public static class FeetConverter
     {
-        public double FromMeter(double meter)
+        private const double ratio = 0.3048; //定数ratioを定義
+                                             //ratioを公開する場合はconstの代わりにstatic readonlyを使用する
+        
+        //メートルからフィートを求める
+        public static double FromMeter(double meter)
         {
             return meter / 0.3048;
         }
-
-        public double ToMeter(double feet)
+        //フィートからメートルを求める
+        public static double ToMeter(double feet)
         {
             return feet * 0.3048;
         }
