@@ -8,21 +8,20 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var n1 = 100;
-            var n2 = 13;
-            var a1 = n1 + n2; //113
-            var a2 = -n1 / n2; //-7
-            var a3 = (double)n1 / n2; //7.692307692307692
-            var a4 = a2 - n1; //-107
-            var a5 = a3 * -2; //-15.38461538461538
-            var a6 = a4 * 2.0M; //-216
+            var x = 8;
+            x /= 2;
+            Console.WriteLine(x); //4
 
-            Console.WriteLine(a1);
-            Console.WriteLine(a2);
-            Console.WriteLine(a3);
-            Console.WriteLine(a4);
-            Console.WriteLine(a5);
-            Console.WriteLine(a6);
+            var a = 4;
+            var b = 6;
+            a += b * 2;
+            Console.WriteLine(a); //16
+
+            var n = 5;
+            var k = 3;
+            n *= (k + 4);
+            Console.WriteLine(n); //35
+
         }
         
     }
