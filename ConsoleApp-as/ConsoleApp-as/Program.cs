@@ -8,9 +8,10 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var name = "近藤";
-            var age = 19;
-            Console.WriteLine("{0}さんは、{1}歳です", name, age);
+            var kilometers_per_hour = 54;
+            var hour = 3;
+            var kilometer = kilometers_per_hour * hour;
+            Console.WriteLine(kilometer);
 
         }
         
