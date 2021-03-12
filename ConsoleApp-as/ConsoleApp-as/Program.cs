@@ -8,18 +8,15 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            Console.Write("*回数を入力してください：");
-            var line = Console.ReadLine();
-            var count = int.Parse(line);
-            for (int n = 0; n < count; n++)
-            {
-                var star = "*";
-                for (int i = 0; i < n; i++)
-                {
-                    star += "*";
-                }
-                Console.WriteLine(star);
-            }
+            var a = 10;
+            var b = 5;
+            Console.WriteLine($"a={a}, b={b}");
+            var temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine($"a={a}, b={b}");
+
+
         }
         
     }
