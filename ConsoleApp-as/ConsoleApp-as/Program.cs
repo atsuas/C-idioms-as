@@ -8,14 +8,18 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var a = 10;
-            var b = 5;
-            Console.WriteLine($"a={a}, b={b}");
-            var temp = a;
-            a = b;
-            b = temp;
-            Console.WriteLine($"a={a}, b={b}");
-
+            var maxlength = "";
+            for (int i = 0; i < 3; i++)
+            {
+                var line = Console.ReadLine();
+                var len = line.Length;
+                if (len > maxlength.Length)
+                {
+                    maxlength = line;
+                }
+                
+            }
+            Console.WriteLine($"長い文字列は{maxlength}です");
 
         }
         
