@@ -8,16 +8,30 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            Console.Write("数値を入力：");
-            var line = Console.ReadLine();
-            var num = int.Parse(line);
-            if ((num % 3 == 0) && (num % 5 == 0))
+            var word = Console.ReadLine();
+            var term = "";
+
+            switch (word)
             {
-                Console.WriteLine("numは3でも5でも割り切れます");
+                case "API":
+                    term = "Application Programing Interface";
+                    break;
+                case "ROB":
+                    term = "Relational Datebase";
+                    break;
+                case "UI":
+                    term = "User Interface";
+                    break;
+                case "IDE":
+                    term = "Integrated Development Environment";
+                    break;
+                case "HTML":
+                    term = "HyperText Markup Language";
+                    break;
             }
-            else
+            if (term != "")
             {
-                Console.WriteLine("違う数値を入力してください");
+                Console.WriteLine($"{word}の略は{term}です");
             }
         }
         
