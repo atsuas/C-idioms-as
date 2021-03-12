@@ -8,21 +8,17 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
+            Console.Write("数値を入力：");
             var line = Console.ReadLine();
-            var number = int.Parse(line);
-            if (number > 0)
+            var num = int.Parse(line);
+            if ((num % 3 == 0) && (num % 5 == 0))
             {
-                Console.WriteLine("正数です");
-            }
-            else if (number < 0)
-            {
-                Console.WriteLine("負数です");
+                Console.WriteLine("numは3でも5でも割り切れます");
             }
             else
             {
-                Console.WriteLine(number);
+                Console.WriteLine("違う数値を入力してください");
             }
-
         }
         
     }
