@@ -8,18 +8,7 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            Console.Write("文字を入力してください:");
-            var line = Console.ReadLine();
-            if (line == "")
-            {
-                Console.WriteLine("空文字列です");
-            }
-            else
-            {
-                Console.WriteLine(line);
-            }
             
-
         }
         
     }
