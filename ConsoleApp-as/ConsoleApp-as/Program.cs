@@ -8,17 +8,17 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var line = Console.ReadLine();
-            var count = int.Parse(line);
-            for (int n = 0; n < count; n++)
+           
+            while (true)
             {
-                var star = "*";
-                for (int i = 0; i < n; i++)
+                var line = Console.ReadLine();
+                var count = int.Parse(line);
+                if (count < 0)
                 {
-                    star += "*";
+                    break;
                 }
-                Console.WriteLine(star);
             }
+           
         }
         
     }
