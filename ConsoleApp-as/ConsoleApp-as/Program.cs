@@ -8,15 +8,16 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var nums = new int[20];
-            for (int i = 0; i < nums.Length; i++)
+            string[] names = { "C#", "Ruby", "Kotlin", "Swift", "Python", "Java", "PHP" };
+            var max = "";
+            foreach (var name in names)
             {
-                nums[i] = 100 + i;
+                if (name.Length >= max.Length)
+                {
+                    max = name;
+                }
             }
-            foreach (var n in nums)
-            {
-                Console.WriteLine(n);
-            }
+            Console.WriteLine(max);
         }
         
     }
