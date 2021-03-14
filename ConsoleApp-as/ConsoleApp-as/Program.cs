@@ -9,9 +9,13 @@ namespace DistanceConverter
         static void Main(string[] args)
         {
             var nums = new int[20];
-            for (int i = 100; i < 120; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                Console.WriteLine(i);
+                nums[i] = 100 + i;
+            }
+            foreach (var n in nums)
+            {
+                Console.WriteLine(n);
             }
         }
         
