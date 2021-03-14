@@ -10,7 +10,7 @@ namespace DistanceConverter
         {
             var nums = new int[4];
             var total = 0;
-            foreach (var num in nums)
+            for (int i = 0; i < nums.Length; i++)
             {
                 var line = Console.ReadLine();
                 var number = int.Parse(line);
