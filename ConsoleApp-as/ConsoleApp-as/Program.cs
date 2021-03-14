@@ -8,16 +8,11 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var nums = new int[4];
-            var total = 0;
-            for (int i = 0; i < nums.Length; i++)
+            var nums = new int[20];
+            for (int i = 100; i < 120; i++)
             {
-                var line = Console.ReadLine();
-                var number = int.Parse(line);
-                total += number;
+                Console.WriteLine(i);
             }
-            var average = total / nums.Length;
-            Console.WriteLine(average);
         }
         
     }
