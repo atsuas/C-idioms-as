@@ -8,18 +8,16 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var maxlen = "";
-            for (int i = 0; i < 3; i++)
+            var nums = new int[4];
+            var total = 0;
+            foreach (var num in nums)
             {
-                var text = Console.ReadLine();
-                var len = text.Length;
-                if (len > maxlen.Length)
-                {
-                    maxlen = text;
-                }
-                
+                var line = Console.ReadLine();
+                var number = int.Parse(line);
+                total += number;
             }
-            Console.WriteLine(maxlen);
+            var average = total / nums.Length;
+            Console.WriteLine(average);
         }
         
     }
