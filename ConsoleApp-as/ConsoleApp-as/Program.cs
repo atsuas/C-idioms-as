@@ -8,45 +8,38 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var book1 = new Book
+            var employee1 = new Employee
             {
-                Title = "猫の恩返し",
-                Auther = "高橋",
-                Pages = 370,
-                Rate = 4,
-                Memo = "おもしろい"
+                Id = 2,
+                FamilyName = "又吉",
+                GivenName = "けんじ",
+                EmailAddress = "kennji@kennji.com"
             };
 
-            var book2 = new Book
+            var employee2 = new Employee
             {
-                Title = "魚物語",
-                Auther = "小林",
-                Pages = 290,
-                Rate = 5,
-                Memo = "まあまあ"
+                Id = 4,
+                FamilyName = "香川",
+                GivenName = "ようこ",
+                EmailAddress = "youko@youko.com"
             };
 
-            book1.Print();
-            book2.Print();
-            
-            
+            employee1.GetFullName();
+            employee2.GetFullName();
         }
-        
     }
 
-    class Book
+    class Employee
     {
-        public string Title { get; set; }
-        public string Auther { get; set; }
-        public int Pages { get; set; }
-        public int Rate { get; set; }
-        public string Memo { get; set; }
+        public int Id { get; set; }
+        public string FamilyName { get; set; }
+        public string GivenName { get; set; }
+        public string EmailAddress { get; set; }
 
-        public void Print()
+        public void GetFullName()
         {
-            Console.WriteLine($"タイトル：{Title}");
-            Console.WriteLine($"著者：{Auther}, ページ数：{Pages},レート：{Rate}, メモ：{Memo}");
+            Console.WriteLine($"{FamilyName} {GivenName}");
         }
-    }
 
+    }
 }
