@@ -8,13 +8,24 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            var line1 = Console.ReadLine();
-            var line2 = Console.ReadLine();
-            var num1 = int.Parse(line1);
-            var num2 = int.Parse(line2);
-            var min = Math.Min(num1, num2);
-            Console.WriteLine(min);
+            var dayday = Date();
+            Console.WriteLine(dayday);
 
+            TheDay();
+        }
+
+        public static int Date()
+        {
+            var month = DateTime.DaysInMonth(2021, 2);
+            return month;
+        }
+
+        public static void TheDay()
+        {
+            var line = Console.ReadLine();
+            var days = DateTime.Parse(line);
+            var week = days.ToString("ddd");
+            Console.WriteLine($"{week}");
         }
     }
 
