@@ -8,32 +8,29 @@ namespace DistanceConverter
     {
         static void Main(string[] args)
         {
-            
+            var nums = new int[] { 10, 20, 30, 8, 84 };
+            Console.WriteLine(ArrayUtils.GetMin(nums, true));
+            Console.WriteLine(ArrayUtils.GetMin(nums));
         }
 
     }
 
     static class ArrayUtils
     {
-        public static int Total(int[] numbers)
+        
+        public static int GetMin(int[] numbers, bool isPosition = false)
         {
-            var total = 0;
+            var min = int.MaxValue;
             foreach (var n in numbers)
             {
-                total += n;
+                if (isPosition && n <= 0)
+                {
+                    continue;
+                }
+                min = Math.Min(min, n);
             }
-            return total;
+            return min;
         }
-
-        public static double Average(int[] numbers)
-        {
-            var total = Total(numbers);
-            return (double)total / numbers.Length;
-        }
-
-        public static int GetMin(int[] isPosition)
-        {
-
-        }
+        
     }
 }
