@@ -9,42 +9,29 @@ namespace DistanceConverter
     {
         static void Main()
         {
-            var sale = new Sale
-            {
-                UnitPrice = 300,
-                Quantity = 2,
-                ProductName = "たこやき"
-            };
-            Console.WriteLine($"{sale.ProductName} {sale.UnitPrice}円 {sale.Quantity}個");
+            var num = new int[] { 20, -10, 42, 56, 11, -4 };
+            Console.WriteLine(ArrayUtil.GetMin(num, true));
+            Console.WriteLine(ArrayUtil.GetMin(num));
         }
        
     }
 
-    class Sale
+    class ArrayUtil
     {
-        private int _unitPrice;
-        private int _quantity;
-        private string _productName;
-
-        public int UnitPrice
+        public static int GetMin(int[] number, bool isPosition = false)
         {
-            get { return _unitPrice; }
-            set { _unitPrice = value; }
+            var min = int.MaxValue;
+            foreach (var n in number)
+            {
+                if (isPosition && n <= 0)
+                {
+                    continue;
+                }
+                min = Math.Min(min, n);
+            }
+            return min;
         }
-
-        public int Quantity
-        {
-            get { return _quantity; }
-            set { _quantity = value; }
-        }
-
-        public string ProductName
-        {
-            get { return _productName; }
-            set { _productName = value; }
-        }
-
-
     }
+
 
 }
