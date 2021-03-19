@@ -9,159 +9,55 @@ namespace DistanceConverter
     {
         static void Main()
         {
-            var pets = new List<IVirtualPet>
+            // Q3-1
+            object person = new Person
             {
-                new FoodiePet("たかし"),
-                new CheerfulPet("ことぶき"),
-                new SleepyPet("かたぶし")
+                FirstName = "翔太",
+                LastName = "青木",
             };
-            foreach (var pet in pets)
+            object employee = new Employee
             {
-                pet.Eat();
-                pet.Play();
-                pet.Sleep();
-                pet.Rest();
-                Console.WriteLine($"{pet.Name} {pet.Mood} {pet.Energy}");
-            }
+                Number = 801,
+                FirstName = "凉子",
+                LastName = "高橋",
+                HireDate = new DateTime(2015, 4, 1)
+            };
+
+            var str1 = person.ToString();
+            Console.WriteLine(str1);
+            var str2 = employee.ToString();
+            Console.WriteLine(str2);
+
+            //// Q3-2
+            Console.WriteLine(person);
+            Console.WriteLine(employee);
         }
-       
     }
 
-    interface IVirtualPet
+    class Person
     {
-        string Name { get; }
-        int Mood { get; set; }
-        int Energy { get; set; }
-        void Eat();
-        void Play();
-        void Sleep();
-        void Rest();
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string FullName
+        {
+            get { return LastName + FirstName; }
+        }
     }
 
-    class FoodiePet : IVirtualPet
+    // 従業員クラス
+    class Employee : Person
     {
-        public string Name { get; private set; }
-        public int Mood { get; set; }
-        public int Energy { get; set; }
+        // 従業員番号
+        public int Number { get; set; }
+        // 入社年月日
+        public DateTime HireDate { get; set; }
 
-        public FoodiePet(string name)
+        public override string ToString()
         {
-            Name = name;
-            Mood = 5;
-            Energy = 100;
-        }
-
-        public void Eat()
-        {
-            Mood += 3;
-            Energy += 5;
-            Console.WriteLine("FoodiePet.Eatメソッドが実行されました");
-        }
-
-        public void Play()
-        {
-            Mood -= 1;
-            Energy -= 10;
-            Console.WriteLine("FoodiePet.Playメソッドが実行されました");
-        }
-
-        public void Sleep()
-        {
-            Mood -= 1;
-            Energy += 2;
-            Console.WriteLine("FoodiePet.Sleepメソッドが実行されました");
-        }
-
-        public void Rest()
-        {
-            Mood += 2;
-            Energy += 4;
-            Console.WriteLine("FoodiePet.Restメソッドが実行されました");
+            var s = $"{Number} {FullName} " +
+                    $"{HireDate.Year}年{HireDate.Month}月{HireDate.Day}日入社";
+            return s;
         }
     }
-
-    class CheerfulPet : IVirtualPet
-    {
-        public string Name { get; private set; }
-        public int Mood { get; set; }
-        public int Energy { get; set; }
-
-        public CheerfulPet(string name)
-        {
-            Name = name;
-            Mood = 5;
-            Energy = 100;
-        }
-
-        public void Eat()
-        {
-            Mood += 0;
-            Energy += 5;
-            Console.WriteLine("Cheerful.Eatメソッドが実行されました");
-        }
-
-        public void Play()
-        {
-            Mood += 3;
-            Energy -= 12;
-            Console.WriteLine("Cheerful.Playメソッドが実行されました");
-        }
-
-        public void Sleep()
-        {
-            Mood -= 1;
-            Energy += 4;
-            Console.WriteLine("Cheerful.Sleepメソッドが実行されました");
-        }
-
-        public void Rest()
-        {
-            Mood += 3;
-            Energy += 5;
-            Console.WriteLine("Cheerful.Restメソッドが実行されました");
-        }
-    }
-
-    class SleepyPet : IVirtualPet
-    {
-        public string Name { get; private set; }
-        public int Mood { get; set; }
-        public int Energy { get; set; }
-
-        public SleepyPet(string name)
-        {
-            Name = name;
-            Mood = 5;
-            Energy = 100;
-        }
-
-        public void Eat()
-        {
-            Mood -= 1;
-            Energy += 5;
-            Console.WriteLine("SleepyPet.Eatメソッドが実行されました");
-        }
-
-        public void Play()
-        {
-            Mood -= 1;
-            Energy -= 10;
-            Console.WriteLine("SleepyPet.Playメソッドが実行されました");
-        }
-
-        public void Sleep()
-        {
-            Mood += 2;
-            Energy += 4;
-            Console.WriteLine("SleepyPet.Sleepメソッドが実行されました");
-        }
-        public void Rest()
-        {
-            Mood += 4;
-            Energy += 6;
-            Console.WriteLine("SleepyPet.Restメソッドが実行されました");
-        }
-    }
-
 }
+
