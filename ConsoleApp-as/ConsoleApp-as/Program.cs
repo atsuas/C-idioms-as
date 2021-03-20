@@ -9,52 +9,35 @@ namespace DistanceConverter
     {
         static void Main()
         {
-            //One();
-
+            One();
             Two();
         }
 
         private static void One()
         {
-            while (true)
+            var sw = new StreamWriter("sample.txt");
+            try
             {
-                try
-                {
-                    var total = 1000;
-                    var line = Console.ReadLine();
-                    var count = int.Parse(line);
-                    var ans = total / count;
-                    Console.WriteLine(ans);
-                    Console.WriteLine("正常終了");
-                    break;
-                }
-                catch
-                {
-                    Console.WriteLine("入力した値が正しくありません。再度入力してください。");
-                }
+                sw.WriteLine("吾輩は猫である");
+                sw.WriteLine("名前はまだない");
+                sw.WriteLine("どこで生まれたんかとんと見当がつかぬ");
+            }
+            finally
+            {
+                sw.Dispose();
             }
         }
 
         private static void Two()
         {
-            while (true)
+            using (var sw = new StreamWriter("sample2.txt"))
             {
-                var total = 1000;
-                var line = Console.ReadLine();
-                if (int.TryParse(line, out var count))
-                {
-                    var ans = total / count;
-                    Console.WriteLine(ans);
-                    Console.WriteLine("seijousyuuryou");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("入力値が間違っています。再度入力してください");
-                }
-                
+                sw.WriteLine("吾輩は猫である");
+                sw.WriteLine("名前はまだない");
+                sw.WriteLine("どこで生まれたんかとんと見当がつかぬ");
             }
         }
+
     }
 
 }
