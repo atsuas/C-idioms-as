@@ -3,31 +3,27 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DistanceConverter
+namespace Exercise
 {
     class Program
     {
-        static void Main()
-        {
-            var line1 = Console.ReadLine();
-            var one = int.Parse(line1);
-            Console.WriteLine();
+        static void Main(string[] args)
+            {
+            var numbers = new List<int> { 12, 87, 94, 14, 53, 20, 40, 35, 76, 91, 31, 17, 48 };
 
-            int a, b;
-            string[] str = Console.ReadLine().Split(' ');
-            a = int.Parse(str[0]);
-            b = int.Parse(str[1]);
-            var two = a + b;
-            Console.WriteLine();
-
-            var four = Console.ReadLine();
-
-            var total = one + two;
-
-            Console.WriteLine($"{total} {four}");
+            Exercise1_1(numbers);
+            Console.WriteLine("-----");
 
         }
 
+        private static void Exercise1_1(List<int> numbers)
+        {
+            var exist = numbers.Exists(n => n % 8 == 0 || n % 9 == 0);
+            if (exist)
+                Console.WriteLine("存在しています");
+            else
+                Console.WriteLine("存在していません");
+        }
     }
 
 }
