@@ -8,21 +8,27 @@ namespace Exercise
     class Program
     {
         static void Main(string[] args)
+        {
+            var line = "Novelist=谷崎潤一郎;BestWork=春琴抄;Born=1886";
+            foreach (var pair in line.Split(';'))
             {
-            var numbers = new List<int> { 12, 87, 94, 14, 53, 20, 40, 35, 76, 91, 31, 17, 48 };
-
-            Exercise1_1(numbers);
-            Console.WriteLine("-----");
-
+                var array = pair.Split('=');
+                Console.WriteLine("{0}:{1}", ToJapanese(array[0]), array[1]);
+            }
         }
 
-        private static void Exercise1_1(List<int> numbers)
+        static string ToJapanese(string key)
         {
-            var exist = numbers.Exists(n => n % 8 == 0 || n % 9 == 0);
-            if (exist)
-                Console.WriteLine("存在しています");
-            else
-                Console.WriteLine("存在していません");
+            switch (key)
+            {
+                case "Novelist":
+                    return "作家　";
+                case "BestWork":
+                    return "代表作";
+                case "Born":
+                    return "誕生年";
+            }
+            throw new ArgumentException("引数keyは、正しい値ではありません");
         }
     }
 
